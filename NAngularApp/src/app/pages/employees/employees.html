@@ -1,0 +1,25 @@
+<h2>Employees</h2>
+
+<p *ngIf="employees.length === 0">Waiting for data...</p>
+
+
+@if(employees.length > 0){
+<table border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Department</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees">
+      <td>{{ emp.id }}</td>
+      <td>{{ emp.name }}</td>
+      <td>{{ emp.age }}</td>
+      <td>{{ emp.department }}</td>
+    </tr>
+  </tbody>
+</table>
+}
